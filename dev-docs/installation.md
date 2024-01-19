@@ -20,26 +20,15 @@ npm # for docs
 
 ## **Dev Setup**
 
-::: tip Activate virtual environment
-
-this is optional but recommended to keep dependencies separate and remove any conflicts
-
-```bash
-source venv/bin/activate
-```
-
-:::
-
 - install requirements
 
 ```bash
-pip install -r requirements.txt
+npm i
 ```
 
 - setup dev-docs
 
 ```bash
-cd dev-docs
 npm install
 ```
 
@@ -48,36 +37,25 @@ npm install
 - migrate dB
 
 ```bash
-python manage.py migrate
+npm run prisma:dev:deploy
 ```
 
 - run the app
 
 ```bash
-python manage.py runserver
+npm run start:dev
 ```
 
 - run the docs
 
 ```bash
-cd dev-docs
-npm run dev
+npm run docs:dev
 ```
 
 ## **Project Structure**
 
-- authentication/: This directory contains the files for your 'authentication' Django app. It includes the models (models.py), views (views.py), and other files that Django uses to build the app.
-
-- data/: This directory contain data files used by your project.
-
-- db.sqlite3: This is your SQLite database file.
-
 - dev-docs/: This directory contains the documentation for your project.
 
-- manage.py: This is a command-line utility that lets you interact with your Django project in various ways such as running the development server, running tests, creating database tables, etc.
+- src/: This directory contains all the code related to your application.
 
-- templates/: This directory contains Django templates. These templates define the structure of the HTML that Django will send to the client.
-
-- uci_integration/: This directory contains the settings for your Django project (settings.py), as well as the root URL configuration (urls.py), and other files.
-
-- venv/: This directory contains the virtual environment for your project. A virtual environment is a self-contained environment that you can use to keep the dependencies required by different projects separate.
+- prisma/: This directory contains the Prisma schema and migration files.

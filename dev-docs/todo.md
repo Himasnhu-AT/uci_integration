@@ -4,15 +4,16 @@
 
 ## Tech Stack
 
-- Django
-- vitepress
-- sqlite3
+- nest for backend
+- vitepress for docs
+- postgres for dB
+- prisma for ORM
 
 ## TODO:
 
 - Phase 1:
 
-  - [x] Setup Django and make basic authentication
+  - [x] Setup nest and setup basic auth flow
   - [ ] Make schema
   - [ ] Complete subscription model
   - [ ] Add google OAuth2
